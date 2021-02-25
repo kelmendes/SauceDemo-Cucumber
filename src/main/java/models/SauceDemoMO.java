@@ -1,8 +1,11 @@
 package models;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.util.List;
 
 public class SauceDemoMO {
     WebDriver driver;
@@ -41,5 +44,17 @@ public class SauceDemoMO {
     public void alertaUsuarioBloqueado() {
         driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/div/form/h3")).isDisplayed();
         System.out.println("Alerta de usuário bloqueado foi encontrado");
+    }
+
+    public void adicionarItensAoCarrinho(List<String> listItensAdicionar){
+        for(int i=0;i<listItensAdicionar.size();i++) {
+            driver.findElement(By.xpath("//div[text()='" + listItensAdicionar.get(i) + "']/./../../../div[3]/button")).click();
+        }
+    }
+
+    public void verificarContador(int intQuantidadeItens){
+        String strQuantideCart = driver.findElement(By.xpath("//a[@class='shopping_cart_link fa-layers fa-fw']/span")).getText();
+        int intQuantideCart = Integer.parseInt(strQuantideCart);
+        Assert.assertArrayEquals(new int[]{intQuantidadeItens}, new int[]{intQuantideCart});
     }
 }
