@@ -57,4 +57,15 @@ public class SauceDemoMO {
         int intQuantideCart = Integer.parseInt(strQuantideCart);
         Assert.assertArrayEquals(new int[]{intQuantidadeItens}, new int[]{intQuantideCart});
     }
+
+    public void acessarCartdeCompras(){
+        driver.findElement(By.xpath("//a[@class='shopping_cart_link fa-layers fa-fw']")).click();
+    }
+
+    public void verificarItensNoCarrinho(List<String> listIntensCart){
+        for(int i=0;i<listIntensCart.size();i++) {
+            driver.findElement(By.xpath("//div[text()='" + listIntensCart.get(i) + "']")).isDisplayed();
+        }
+
+    }
 }

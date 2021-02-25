@@ -57,5 +57,15 @@ public class SauceDemoLoginSteps {
         sauceDemoMO.verificarContador(3);
     }
 
+    @Given("^Acessar tela do carrinho de compras$")
+    public void acessar_tela_do_carrinho_de_compras() throws Throwable {
+        sauceDemoMO.acessarCartdeCompras();
+    }
+
+    @When("^Validar que todos os \"([^\"]*)\" estão adicionados$")
+    public void validar_que_todos_os_estão_adicionados(List<String> strProdutos) throws Throwable {
+        sauceDemoMO.verificarItensNoCarrinho(strProdutos);
+
+    }
 
 }
