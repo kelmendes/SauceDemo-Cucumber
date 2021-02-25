@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = {"src/main/java/features"}
         ,glue = {"stepdefinition"}
         ,dryRun = false
-//        ,tags = {"@Test"}
+        ,tags = {"@Test"}
 )
 public class Runner {
 }
