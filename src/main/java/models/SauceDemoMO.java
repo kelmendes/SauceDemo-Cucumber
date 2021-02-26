@@ -2,6 +2,7 @@ package models;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -66,6 +67,35 @@ public class SauceDemoMO {
         for(int i=0;i<listIntensCart.size();i++) {
             driver.findElement(By.xpath("//div[text()='" + listIntensCart.get(i) + "']")).isDisplayed();
         }
+    }
+
+    public void clicarBtnCheckout(){
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath("//a[text()='CHECKOUT']")));
+        driver.findElement(By.xpath("//a[text()='CHECKOUT']")).click();
+    }
+
+    public void preencherDadosDoCheckout(){
+        driver.findElement(By.xpath("//*[@id='first-name']")).sendKeys("TESTE NOME");
+        driver.findElement(By.xpath("//*[@id='last-name']")).sendKeys("SOBRE NOME");
+        driver.findElement(By.xpath("//*[@id='postal-code']")).sendKeys("55034090");
+    }
+
+    public void clicarBtnContinue(){
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath("//input[@value='CONTINUE']")));
+        driver.findElement(By.xpath("//input[@value='CONTINUE']")).click();
+    }
+
+    public void clicarBtnFinish(){
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.linkText("FINISH")));
+        driver.findElement(By.linkText("FINISH")).click();
+    }
+
+    public void validarTelaDespachoOrdem(){
+        //h2[@class='complete-header'] = THANK YOU FOR YOUR ORDER
+        //div[@class='complete-text'] = Your order has been dispatched, and will arrive just as fast as the pony can get there!
+        driver.findElement(By.xpath("//h2[@class='complete-header']")).isDisplayed();
+        driver.findElement(By.xpath("//div[@class='complete-text']")).isDisplayed();
+
 
     }
 }
