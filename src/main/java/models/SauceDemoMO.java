@@ -2,11 +2,13 @@ package models;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class SauceDemoMO {
     WebDriver driver;
@@ -18,6 +20,13 @@ public class SauceDemoMO {
     public void abrirBrowser(String urlSite){
         System.setProperty("webdriver.gecko.driver", "C:\\drivers\\geckodriver.exe");
         this.driver = new FirefoxDriver();
+
+        this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        this.driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+
+        this.driver.manage().deleteAllCookies();
+        this.driver.manage().window().setSize(new Dimension(1280,600));
+//        this.driver.manage().window().maximize();
 
         this.driver.get(urlSite);
     }
