@@ -54,7 +54,7 @@ public class SauceDemoLoginSteps {
 
     @When("^O contado de itens no carrinho deve mudar$")
     public void o_contado_de_itens_no_carrinho_deve_mudar(){
-        sauceDemoMO.verificarContador(3);
+        sauceDemoMO.verificarContador(6);
     }
 
     @Given("^Acessar tela do carrinho de compras$")
