@@ -52,7 +52,7 @@ public class SauceDemoMO {
     }
 
     public void alertaUsuarioBloqueado() {
-        driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/div/form/h3")).isDisplayed();
+        driver.findElement(By.xpath("//h3[@data-test='error']")).isDisplayed();
         System.out.println("Alerta de usuário bloqueado foi encontrado");
     }
 
