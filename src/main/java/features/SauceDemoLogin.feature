@@ -1,5 +1,6 @@
 Feature: Validação do Login
 
+    @Login
     Scenario Outline: Validação do Login com usuário ativo
         Given Dado que consigo   carregar a aplicação
         And Informo o nome de "<nome_user>" e "<passwd_user>" válidos
@@ -10,7 +11,8 @@ Feature: Validação do Login
             | nome_user       | passwd_user   |
             | standard_user   | secret_sauce  |
             | performance_glitch_user | secret_sauce  |
-    @Test
+
+    @Login
     Scenario Outline: Validação do Login com usuário bloqueado
         Given Dado que consigo   carregar a aplicação
         And Informo o nome de "<nome_user>" e "<passwd_user>" válidos
@@ -20,3 +22,14 @@ Feature: Validação do Login
         Examples:
             | nome_user       | passwd_user   |
             | locked_out_user   | secret_sauce  |
+
+    @Login
+    Scenario Outline: Validação do Login com usuário errado
+        Given Dado que consigo   carregar a aplicação
+        And Informo o nome de "<nome_user>" e "<passwd_user>" válidos
+        And Clico no botão login
+        When Devo ser exibido um alerta que o esse usuario ou senha está errado
+        Then Então deve fechar o navegador
+        Examples:
+            | nome_user       | passwd_user   |
+            | locked_out_user   | senha_errada  |
