@@ -51,7 +51,12 @@ public class SauceDemoMO {
         System.out.println("in Display");
     }
 
-    public void alertaUsuarioBloqueado() {
+    public void alertaUsuarioBloqueadoOUUsuarioOuSenhaErrado() {
+        driver.findElement(By.xpath("//h3[@data-test='error']")).isDisplayed();
+        System.out.println("Alerta de usuário bloqueado foi encontrado");
+    }
+
+    public void alertaUsuarioOuSenhaErrado() {
         driver.findElement(By.xpath("//h3[@data-test='error']")).isDisplayed();
         System.out.println("Alerta de usuário bloqueado foi encontrado");
     }
