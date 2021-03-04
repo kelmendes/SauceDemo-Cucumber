@@ -45,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Mar 3, 2021 04:58:40 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Mar 4, 2021 10:39:33 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -72,7 +72,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@Test</a></li>
+					<li><a href='#'>@Login</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -127,7 +127,7 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -141,7 +141,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>20</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -165,7 +165,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Validação do Login</span>
-						<span class='test-time'>Mar 3, 2021 04:58:40 PM</span>
+						<span class='test-time'>Mar 4, 2021 10:39:34 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -176,20 +176,20 @@
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='scenariooutline node' test-id='2' status='pass'>
-    <span class='duration right label'>0h 0m 6s+992ms</span>
+    <span class='duration right label'>0h 0m 25s+805ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Validação do Login com usuário bloqueado</div>
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Validação do Login com usuário ativo</div>
     </div>
     <ul class='steps'>
         <li test-id='3' class='node scenario pass' status='pass'>
-            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validação do Login com usuário bloqueado</div>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validação do Login com usuário ativo</div>
             <ul class='gc steps'>
                     <li test-id='4' class='gc given pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Dado que consigo   carregar a aplicação</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='5' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Informo o nome de "locked_out_user" e "secret_sauce" válidos</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Informo o nome de "standard_user" e "secret_sauce" válidos</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='6' class='gc and pass' status='pass'>
@@ -197,10 +197,101 @@
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='7' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Devo ser exibido um alerta que o esse usuario está bloqueado</h6>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Devo ser redirecionado para tela inicial do Digital</h6>
                             <div class="node-step">passed</div>
                     </li>
                     <li test-id='8' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Então deve fechar o navegador</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+        <li test-id='9' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validação do Login com usuário ativo</div>
+            <ul class='gc steps'>
+                    <li test-id='10' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Dado que consigo   carregar a aplicação</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='11' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Informo o nome de "performance_glitch_user" e "secret_sauce" válidos</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='12' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clico no botão login</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='13' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Devo ser redirecionado para tela inicial do Digital</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='14' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Então deve fechar o navegador</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class='scenariooutline node' test-id='15' status='pass'>
+    <span class='duration right label'>0h 0m 9s+742ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Validação do Login com usuário bloqueado</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='16' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validação do Login com usuário bloqueado</div>
+            <ul class='gc steps'>
+                    <li test-id='17' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Dado que consigo   carregar a aplicação</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='18' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Informo o nome de "locked_out_user" e "secret_sauce" válidos</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='19' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clico no botão login</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='20' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Devo ser exibido um alerta que o esse usuario está bloqueado</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='21' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Então deve fechar o navegador</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class='scenariooutline node' test-id='22' status='pass'>
+    <span class='duration right label'>0h 0m 9s+369ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Validação do Login com usuário errado</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='23' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validação do Login com usuário errado</div>
+            <ul class='gc steps'>
+                    <li test-id='24' class='gc given pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Dado que consigo   carregar a aplicação</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='25' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Informo o nome de "locked_out_user" e "senha_errada" válidos</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='26' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Clico no botão login</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='27' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Devo ser exibido um alerta que o esse usuario ou senha está errado</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='28' class='gc then pass' status='pass'>
                         <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Então deve fechar o navegador</h6>
                             <div class="node-step">passed</div>
                     </li>
@@ -250,14 +341,14 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Test</span>
+						<span class='category-name'>@Login</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>4</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
 							
 							
 						</div>
@@ -272,8 +363,23 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 3, 2021 04:58:40 PM</td>
-										<td class='linked' test-id='3'>Validação do Login.Validação do Login com usuário bloqueado.Validação do Login com usuário bloqueado</td>
+										<td>Mar 4, 2021 10:39:34 AM</td>
+										<td class='linked' test-id='3'>Validação do Login.Validação do Login com usuário ativo.Validação do Login com usuário ativo</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2021 10:39:45 AM</td>
+										<td class='linked' test-id='9'>Validação do Login.Validação do Login com usuário ativo.Validação do Login com usuário ativo</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2021 10:40:00 AM</td>
+										<td class='linked' test-id='16'>Validação do Login.Validação do Login com usuário bloqueado.Validação do Login com usuário bloqueado</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2021 10:40:09 AM</td>
+										<td class='linked' test-id='23'>Validação do Login.Validação do Login com usuário errado.Validação do Login com usuário errado</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -304,31 +410,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>20</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 3, 2021 04:58:40 PM</div>
+					<div class='panel-lead'>Mar 4, 2021 10:39:33 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 3, 2021 04:58:47 PM</div>
+			 		<div class='panel-lead'>Mar 4, 2021 10:40:19 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 7s+170ms</div>
+					<div class='panel-lead'>0h 0m 45s+209ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -344,8 +450,8 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Test</td>
-							<td>1</td>
+							<td>@Login</td>
+							<td>4</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -371,8 +477,8 @@
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 0,
-				childCount: 1,
-				passChild: 1,
+				childCount: 4,
+				passChild: 4,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -381,8 +487,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 5,
-				passGrandChild: 5,
+				grandChildCount: 20,
+				passGrandChild: 20,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -395,7 +501,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Validação do Login":6.992
+			        "Validação do Login":44.932
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

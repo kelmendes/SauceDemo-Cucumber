@@ -39,7 +39,12 @@ public class SauceDemoLoginSteps {
 
     @When("^Devo ser exibido um alerta que o esse usuario está bloqueado$")
     public void devo_ser_exibido_um_alerta_que_o_esse_usuario_está_bloqueado()  {
-        sauceDemoMO.alertaUsuarioBloqueado();
+        sauceDemoMO.alertaUsuarioBloqueadoOUUsuarioOuSenhaErrado();
+    }
+
+    @When("^Devo ser exibido um alerta que o esse usuario ou senha está errado$")
+    public void devo_ser_exibido_um_alerta_que_o_esse_usuario_ou_senha_está_errado(){
+        sauceDemoMO.alertaUsuarioBloqueadoOUUsuarioOuSenhaErrado();
     }
 
     @Then("^Então deve fechar o navegador$")
