@@ -6,19 +6,21 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import pageobjects.SauceDemoPO;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class SauceDemoMO {
     WebDriver driver;
+    SauceDemoPO object = new SauceDemoPO();
 
     public SauceDemoMO(WebDriver getDriver) {
         this.driver = getDriver;
     }
 
     public void abrirBrowser(String urlSite){
-        System.setProperty("webdriver.gecko.driver", "C:\\drivers\\geckodriver.exe");
+        System.setProperty(object.browserPropety,object.driverLocation);
         this.driver = new FirefoxDriver();
 
         this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -38,27 +40,20 @@ public class SauceDemoMO {
 
 
     public void login (String nome, String senha){
-        driver.findElement(By.xpath("//*[@id=\'user-name\']")).sendKeys(nome);
-        driver.findElement(By.xpath("//*[@id=\'password\']")).sendKeys(senha);
+        driver.findElement(By.xpath(object.inputUserName)).sendKeys(nome);
+        driver.findElement(By.xpath(object.inputPassword)).sendKeys(senha);
     }
 
     public void clickBtnLogin() {
-        driver.findElement(By.xpath("//*[@id=\'login-button\']")).click();
+        driver.findElement(By.xpath(object.btnLogin)).click();
     }
 
     public void validarLoginHome() {
-        driver.findElement(By.xpath("//*[@id=\'inventory_container\']")).isDisplayed();
-        System.out.println("in Display");
+        driver.findElement(By.xpath(object.divContainerListaDeItensHome)).isDisplayed();
     }
 
     public void alertaUsuarioBloqueadoOUUsuarioOuSenhaErrado() {
-        driver.findElement(By.xpath("//h3[@data-test='error']")).isDisplayed();
-        System.out.println("Alerta de usuário bloqueado foi encontrado");
-    }
-
-    public void alertaUsuarioOuSenhaErrado() {
-        driver.findElement(By.xpath("//h3[@data-test='error']")).isDisplayed();
-        System.out.println("Alerta de usuário bloqueado foi encontrado");
+        driver.findElement(By.xpath(object.alertErroLogin)).isDisplayed();
     }
 
     public void adicionarItensAoCarrinho(List<String> listItensAdicionar){
@@ -68,13 +63,13 @@ public class SauceDemoMO {
     }
 
     public void verificarContador(int intQuantidadeItens){
-        String strQuantideCart = driver.findElement(By.xpath("//a[@class='shopping_cart_link fa-layers fa-fw']/span")).getText();
+        String strQuantideCart = driver.findElement(By.xpath(object.spanQtdItensCarrinho)).getText();
         int intQuantideCart = Integer.parseInt(strQuantideCart);
         Assert.assertArrayEquals(new int[]{intQuantidadeItens}, new int[]{intQuantideCart});
     }
 
     public void acessarCartdeCompras(){
-        driver.findElement(By.xpath("//a[@class='shopping_cart_link fa-layers fa-fw']")).click();
+        driver.findElement(By.xpath(object.cartIcone)).click();
     }
 
     public void verificarItensNoCarrinho(List<String> listIntensCart){
@@ -84,24 +79,24 @@ public class SauceDemoMO {
     }
 
     public void clicarBtnCheckout(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath("//a[text()='CHECKOUT']")));
-        driver.findElement(By.xpath("//a[text()='CHECKOUT']")).click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath(object.btnCheckout)));
+        driver.findElement(By.xpath(object.btnCheckout)).click();
     }
 
     public void preencherDadosDoCheckout(){
-        driver.findElement(By.xpath("//*[@id='first-name']")).sendKeys("TESTE NOME");
-        driver.findElement(By.xpath("//*[@id='last-name']")).sendKeys("SOBRE NOME");
-        driver.findElement(By.xpath("//*[@id='postal-code']")).sendKeys("55034090");
+        driver.findElement(By.xpath(object.inputCheckoutName)).sendKeys("TESTE NOME");
+        driver.findElement(By.xpath(object.inputCheckoutLastName)).sendKeys("SOBRE NOME");
+        driver.findElement(By.xpath(object.inputCheckoutCEP)).sendKeys("55034090");
     }
 
     public void clicarBtnContinue(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath("//input[@value='CONTINUE']")));
-        driver.findElement(By.xpath("//input[@value='CONTINUE']")).click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath(object.btnCheckoutContinue)));
+        driver.findElement(By.xpath(object.btnCheckoutContinue)).click();
     }
 
     public void clicarBtnFinish(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.linkText("FINISH")));
-        driver.findElement(By.linkText("FINISH")).click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.linkText(object.btnFinish)));
+        driver.findElement(By.linkText(object.btnFinish)).click();
     }
 
     public void validarTelaDespachoOrdem(){
