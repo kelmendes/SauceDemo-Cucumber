@@ -1,5 +1,6 @@
 Feature: Realizar operções para validar o carrinho
 
+    @Cart
     Scenario Outline: Adicionando Itens ao carrinho de compras
         Given Dado que consigo   carregar a aplicação
         And Informo o nome de "<nome_user>" e "<passwd_user>" válidos
@@ -12,7 +13,7 @@ Feature: Realizar operções para validar o carrinho
             | nome_user       | passwd_user   | nome_produto |
             | standard_user   | secret_sauce  | Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt |
 
-
+    @Cart
     Scenario Outline: Validando Itens ao carrinho de compras
         Given Dado que consigo   carregar a aplicação
         And Informo o nome de "<nome_user>" e "<passwd_user>" válidos
@@ -26,7 +27,7 @@ Feature: Realizar operções para validar o carrinho
             | nome_user       | passwd_user   | nome_produto |
             | performance_glitch_user   | secret_sauce  | Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt |
 
-#    @Test
+    @Cart
     Scenario Outline: Proceder para checkout
         Given Dado que consigo   carregar a aplicação
         And Informo o nome de "<nome_user>" e "<passwd_user>" válidos

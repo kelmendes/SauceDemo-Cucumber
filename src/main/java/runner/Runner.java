@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         ,glue = {"stepdefinition"}
         ,plugin = {"html:target/cucumber-html-report", "com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/output/report.html"}
         ,dryRun = false
-        ,tags = {"@Login"}
+        ,tags = {"@Login, @Cart"}
 )
 public class Runner {
 }
