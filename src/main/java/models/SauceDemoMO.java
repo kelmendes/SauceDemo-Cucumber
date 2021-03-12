@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import pageobjects.SauceDemoPO;
+import stepdefinition.hook.Hook;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -15,26 +16,16 @@ public class SauceDemoMO {
     WebDriver driver;
     SauceDemoPO object = new SauceDemoPO();
 
-    public SauceDemoMO(WebDriver getDriver) {
-        this.driver = getDriver;
+    public SauceDemoMO() {
+        this.driver = Hook.getsDrivers();
     }
 
     public void abrirBrowser(String urlSite){
-        System.setProperty(object.browserPropety,object.driverLocation);
-        this.driver = new FirefoxDriver();
-
-        this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        this.driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-
-        this.driver.manage().deleteAllCookies();
-        this.driver.manage().window().setSize(new Dimension(1280,600));
-//        this.driver.manage().window().maximize();
-
         this.driver.get(urlSite);
     }
 
     public void fecharBrowser() {
-        this.driver.close();
+//        this.driver.close();
         System.out.println("Browser Fechado!");
     }
 

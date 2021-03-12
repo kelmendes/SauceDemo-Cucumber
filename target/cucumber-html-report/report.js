@@ -83,7 +83,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 212000,
+  "duration": 7302186500,
   "status": "passed"
 });
 formatter.scenario({
@@ -146,7 +146,7 @@ formatter.match({
   "location": "SauceDemoLoginSteps.dado_que_consigo_carregar_a_aplicação()"
 });
 formatter.result({
-  "duration": 11114818900,
+  "duration": 1254050100,
   "status": "passed"
 });
 formatter.match({
@@ -163,21 +163,21 @@ formatter.match({
   "location": "SauceDemoLoginSteps.informo_o_nome_de_e_válidos(String,String)"
 });
 formatter.result({
-  "duration": 304079700,
+  "duration": 224989000,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.clico_no_botao_login()"
 });
 formatter.result({
-  "duration": 337497100,
+  "duration": 411511200,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.devo_ser_redirecionado_para_tela_inicial_do_Digital()"
 });
 formatter.result({
-  "duration": 178100100,
+  "duration": 127979300,
   "status": "passed"
 });
 formatter.match({
@@ -187,28 +187,28 @@ formatter.match({
       "offset": 19
     }
   ],
-  "location": "SauceDemoLoginSteps.adiciono_os_itens_clicando_no_botão_Add_to_Cart(String\u003e)"
+  "location": "SauceDemoCartSteps.adiciono_os_itens_clicando_no_botão_Add_to_Cart(String\u003e)"
 });
 formatter.result({
-  "duration": 1695838500,
+  "duration": 1636705300,
   "status": "passed"
 });
 formatter.match({
-  "location": "SauceDemoLoginSteps.o_contado_de_itens_no_carrinho_deve_mudar()"
+  "location": "SauceDemoCartSteps.o_contado_de_itens_no_carrinho_deve_mudar()"
 });
 formatter.result({
-  "duration": 94578400,
+  "duration": 91036800,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.então_deve_fechar_o_navegador()"
 });
 formatter.result({
-  "duration": 1506910900,
+  "duration": 175600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 68200,
+  "duration": 1491272000,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -293,7 +293,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 110900,
+  "duration": 5864277000,
   "status": "passed"
 });
 formatter.scenario({
@@ -364,7 +364,7 @@ formatter.match({
   "location": "SauceDemoLoginSteps.dado_que_consigo_carregar_a_aplicação()"
 });
 formatter.result({
-  "duration": 6819461300,
+  "duration": 993352500,
   "status": "passed"
 });
 formatter.match({
@@ -381,21 +381,21 @@ formatter.match({
   "location": "SauceDemoLoginSteps.informo_o_nome_de_e_válidos(String,String)"
 });
 formatter.result({
-  "duration": 334919100,
+  "duration": 431271500,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.clico_no_botao_login()"
 });
 formatter.result({
-  "duration": 5427000500,
+  "duration": 5350042900,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.devo_ser_redirecionado_para_tela_inicial_do_Digital()"
 });
 formatter.result({
-  "duration": 166531300,
+  "duration": 151961500,
   "status": "passed"
 });
 formatter.match({
@@ -405,17 +405,17 @@ formatter.match({
       "offset": 19
     }
   ],
-  "location": "SauceDemoLoginSteps.adiciono_os_itens_clicando_no_botão_Add_to_Cart(String\u003e)"
+  "location": "SauceDemoCartSteps.adiciono_os_itens_clicando_no_botão_Add_to_Cart(String\u003e)"
 });
 formatter.result({
-  "duration": 1725784500,
+  "duration": 1735761300,
   "status": "passed"
 });
 formatter.match({
-  "location": "SauceDemoLoginSteps.acessar_tela_do_carrinho_de_compras()"
+  "location": "SauceDemoCartSteps.acessar_tela_do_carrinho_de_compras()"
 });
 formatter.result({
-  "duration": 277047000,
+  "duration": 318691400,
   "status": "passed"
 });
 formatter.match({
@@ -425,21 +425,21 @@ formatter.match({
       "offset": 22
     }
   ],
-  "location": "SauceDemoLoginSteps.validar_que_todos_os_estão_adicionados(String\u003e)"
+  "location": "SauceDemoCartSteps.validar_que_todos_os_estão_adicionados(String\u003e)"
 });
 formatter.result({
-  "duration": 458926100,
+  "duration": 513852600,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.então_deve_fechar_o_navegador()"
 });
 formatter.result({
-  "duration": 1461185800,
+  "duration": 125800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 79200,
+  "duration": 1119948700,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -554,7 +554,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 84800,
+  "duration": 5882884500,
   "status": "passed"
 });
 formatter.scenario({
@@ -655,7 +655,7 @@ formatter.match({
   "location": "SauceDemoLoginSteps.dado_que_consigo_carregar_a_aplicação()"
 });
 formatter.result({
-  "duration": 7406326500,
+  "duration": 1433631000,
   "status": "passed"
 });
 formatter.match({
@@ -672,21 +672,21 @@ formatter.match({
   "location": "SauceDemoLoginSteps.informo_o_nome_de_e_válidos(String,String)"
 });
 formatter.result({
-  "duration": 345072600,
+  "duration": 436265900,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.clico_no_botao_login()"
 });
 formatter.result({
-  "duration": 5332666400,
+  "duration": 5326960100,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.devo_ser_redirecionado_para_tela_inicial_do_Digital()"
 });
 formatter.result({
-  "duration": 124535900,
+  "duration": 144906300,
   "status": "passed"
 });
 formatter.match({
@@ -696,17 +696,17 @@ formatter.match({
       "offset": 19
     }
   ],
-  "location": "SauceDemoLoginSteps.adiciono_os_itens_clicando_no_botão_Add_to_Cart(String\u003e)"
+  "location": "SauceDemoCartSteps.adiciono_os_itens_clicando_no_botão_Add_to_Cart(String\u003e)"
 });
 formatter.result({
-  "duration": 1673094900,
+  "duration": 1739972200,
   "status": "passed"
 });
 formatter.match({
-  "location": "SauceDemoLoginSteps.acessar_tela_do_carrinho_de_compras()"
+  "location": "SauceDemoCartSteps.acessar_tela_do_carrinho_de_compras()"
 });
 formatter.result({
-  "duration": 323928200,
+  "duration": 299055600,
   "status": "passed"
 });
 formatter.match({
@@ -716,63 +716,63 @@ formatter.match({
       "offset": 22
     }
   ],
-  "location": "SauceDemoLoginSteps.validar_que_todos_os_estão_adicionados(String\u003e)"
+  "location": "SauceDemoCartSteps.validar_que_todos_os_estão_adicionados(String\u003e)"
 });
 formatter.result({
-  "duration": 473992300,
+  "duration": 528181700,
   "status": "passed"
 });
 formatter.match({
-  "location": "SauceDemoLoginSteps.clico_no_botão_de_checkout()"
+  "location": "SauceDemoCartSteps.clico_no_botão_de_checkout()"
 });
 formatter.result({
-  "duration": 335176200,
+  "duration": 337647000,
   "status": "passed"
 });
 formatter.match({
-  "location": "SauceDemoLoginSteps.informo_os_dados_básicos_para_realizar_o_checkout()"
+  "location": "SauceDemoCartSteps.informo_os_dados_básicos_para_realizar_o_checkout()"
 });
 formatter.result({
-  "duration": 451073300,
+  "duration": 424751800,
   "status": "passed"
 });
 formatter.match({
-  "location": "SauceDemoLoginSteps.clico_em_continuar_com_o_checkout()"
+  "location": "SauceDemoCartSteps.clico_em_continuar_com_o_checkout()"
 });
 formatter.result({
-  "duration": 356549500,
+  "duration": 343038000,
   "status": "passed"
 });
 formatter.match({
-  "location": "SauceDemoLoginSteps.valido_a_forma_de_pagamento_entrega_e_total_da_compra()"
+  "location": "SauceDemoCartSteps.valido_a_forma_de_pagamento_entrega_e_total_da_compra()"
 });
 formatter.result({
-  "duration": 247400,
+  "duration": 311500,
   "status": "passed"
 });
 formatter.match({
-  "location": "SauceDemoLoginSteps.clico_em_finish()"
+  "location": "SauceDemoCartSteps.clico_em_finish()"
 });
 formatter.result({
-  "duration": 511285700,
+  "duration": 514139400,
   "status": "passed"
 });
 formatter.match({
-  "location": "SauceDemoLoginSteps.devo_ser_redirecionado_para_tela_que_minha_ordem_vai_ser_despachada()"
+  "location": "SauceDemoCartSteps.devo_ser_redirecionado_para_tela_que_minha_ordem_vai_ser_despachada()"
 });
 formatter.result({
-  "duration": 180578400,
+  "duration": 166543500,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.então_deve_fechar_o_navegador()"
 });
 formatter.result({
-  "duration": 1333272700,
+  "duration": 114300,
   "status": "passed"
 });
 formatter.after({
-  "duration": 58200,
+  "duration": 1483601200,
   "status": "passed"
 });
 formatter.uri("SauceDemoLogin.feature");
@@ -856,7 +856,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 72300,
+  "duration": 5823389600,
   "status": "passed"
 });
 formatter.scenario({
@@ -906,7 +906,7 @@ formatter.match({
   "location": "SauceDemoLoginSteps.dado_que_consigo_carregar_a_aplicação()"
 });
 formatter.result({
-  "duration": 8096274100,
+  "duration": 1410783400,
   "status": "passed"
 });
 formatter.match({
@@ -923,36 +923,36 @@ formatter.match({
   "location": "SauceDemoLoginSteps.informo_o_nome_de_e_válidos(String,String)"
 });
 formatter.result({
-  "duration": 288126400,
+  "duration": 298147200,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.clico_no_botao_login()"
 });
 formatter.result({
-  "duration": 346796900,
+  "duration": 329310700,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.devo_ser_redirecionado_para_tela_inicial_do_Digital()"
 });
 formatter.result({
-  "duration": 110634800,
+  "duration": 113098100,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.então_deve_fechar_o_navegador()"
 });
 formatter.result({
-  "duration": 1416210500,
+  "duration": 59500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 105500,
+  "duration": 1373217900,
   "status": "passed"
 });
 formatter.before({
-  "duration": 101600,
+  "duration": 7456328300,
   "status": "passed"
 });
 formatter.scenario({
@@ -1002,7 +1002,7 @@ formatter.match({
   "location": "SauceDemoLoginSteps.dado_que_consigo_carregar_a_aplicação()"
 });
 formatter.result({
-  "duration": 7415921500,
+  "duration": 1139249200,
   "status": "passed"
 });
 formatter.match({
@@ -1019,32 +1019,32 @@ formatter.match({
   "location": "SauceDemoLoginSteps.informo_o_nome_de_e_válidos(String,String)"
 });
 formatter.result({
-  "duration": 436598500,
+  "duration": 292028900,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.clico_no_botao_login()"
 });
 formatter.result({
-  "duration": 5359852400,
+  "duration": 5371820700,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.devo_ser_redirecionado_para_tela_inicial_do_Digital()"
 });
 formatter.result({
-  "duration": 85720300,
+  "duration": 155054200,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.então_deve_fechar_o_navegador()"
 });
 formatter.result({
-  "duration": 1630781600,
+  "duration": 53800,
   "status": "passed"
 });
 formatter.after({
-  "duration": 44400,
+  "duration": 1047447700,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1112,7 +1112,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 81200,
+  "duration": 6421065600,
   "status": "passed"
 });
 formatter.scenario({
@@ -1162,7 +1162,7 @@ formatter.match({
   "location": "SauceDemoLoginSteps.dado_que_consigo_carregar_a_aplicação()"
 });
 formatter.result({
-  "duration": 6727158900,
+  "duration": 1000264700,
   "status": "passed"
 });
 formatter.match({
@@ -1179,32 +1179,32 @@ formatter.match({
   "location": "SauceDemoLoginSteps.informo_o_nome_de_e_válidos(String,String)"
 });
 formatter.result({
-  "duration": 203978800,
+  "duration": 328039200,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.clico_no_botao_login()"
 });
 formatter.result({
-  "duration": 293061100,
+  "duration": 261812400,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.devo_ser_exibido_um_alerta_que_o_esse_usuario_está_bloqueado()"
 });
 formatter.result({
-  "duration": 76631500,
+  "duration": 95613800,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.então_deve_fechar_o_navegador()"
 });
 formatter.result({
-  "duration": 1366718600,
+  "duration": 182600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 38900,
+  "duration": 1116690800,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1272,7 +1272,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 49900,
+  "duration": 5773914000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1322,7 +1322,7 @@ formatter.match({
   "location": "SauceDemoLoginSteps.dado_que_consigo_carregar_a_aplicação()"
 });
 formatter.result({
-  "duration": 7478600500,
+  "duration": 1303344200,
   "status": "passed"
 });
 formatter.match({
@@ -1339,32 +1339,32 @@ formatter.match({
   "location": "SauceDemoLoginSteps.informo_o_nome_de_e_válidos(String,String)"
 });
 formatter.result({
-  "duration": 215580900,
+  "duration": 344098900,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.clico_no_botao_login()"
 });
 formatter.result({
-  "duration": 283983000,
+  "duration": 295622800,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.devo_ser_exibido_um_alerta_que_o_esse_usuario_ou_senha_está_errado()"
 });
 formatter.result({
-  "duration": 130839800,
+  "duration": 91724000,
   "status": "passed"
 });
 formatter.match({
   "location": "SauceDemoLoginSteps.então_deve_fechar_o_navegador()"
 });
 formatter.result({
-  "duration": 1538963300,
+  "duration": 128300,
   "status": "passed"
 });
 formatter.after({
-  "duration": 50500,
+  "duration": 1181255200,
   "status": "passed"
 });
 });
