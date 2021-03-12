@@ -4,14 +4,11 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import models.SauceDemoMO;
-import org.openqa.selenium.WebDriver;
-
-import java.util.List;
+import models.SauceDemoLoginMO;
 
 public class SauceDemoLoginSteps {
 
-    SauceDemoMO sauceDemoMO = new SauceDemoMO();
+    SauceDemoLoginMO sauceDemoMO = new SauceDemoLoginMO();
 
     @Given("^Dado que consigo   carregar a aplicação$")
     public void dado_que_consigo_carregar_a_aplicação(){

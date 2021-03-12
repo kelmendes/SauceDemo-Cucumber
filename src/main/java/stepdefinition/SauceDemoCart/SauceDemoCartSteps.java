@@ -3,13 +3,13 @@ package stepdefinition.SauceDemoCart;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
-import models.SauceDemoMO;
+import models.SauceDemoCartMO;
 
 import java.util.List;
 
 public class SauceDemoCartSteps {
 
-    SauceDemoMO sauceDemoMO = new SauceDemoMO();
+    SauceDemoCartMO sauceDemoMO = new SauceDemoCartMO();
 
     @And("^Adiciono os itens \"([^\"]*)\" clicando no botão Add to Cart$")
     public void adiciono_os_itens_clicando_no_botão_Add_to_Cart(List<String> strNomeProduto){ sauceDemoMO.adicionarItensAoCarrinho(strNomeProduto); }

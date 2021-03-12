@@ -2,49 +2,19 @@ package models;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import pageobjects.SauceDemoPO;
+import pageobjects.SauceDemoCartPO;
 import stepdefinition.hook.Hook;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-public class SauceDemoMO {
+public class SauceDemoCartMO {
     WebDriver driver;
-    SauceDemoPO object = new SauceDemoPO();
+    SauceDemoCartPO object = new SauceDemoCartPO();
 
-    public SauceDemoMO() {
+    public SauceDemoCartMO() {
         this.driver = Hook.getsDrivers();
-    }
-
-    public void abrirBrowser(String urlSite){
-        this.driver.get(urlSite);
-    }
-
-    public void fecharBrowser() {
-//        this.driver.close();
-        System.out.println("Browser Fechado!");
-    }
-
-
-    public void login (String nome, String senha){
-        driver.findElement(By.xpath(object.inputUserName)).sendKeys(nome);
-        driver.findElement(By.xpath(object.inputPassword)).sendKeys(senha);
-    }
-
-    public void clickBtnLogin() {
-        driver.findElement(By.xpath(object.btnLogin)).click();
-    }
-
-    public void validarLoginHome() {
-        driver.findElement(By.xpath(object.divContainerListaDeItensHome)).isDisplayed();
-    }
-
-    public void alertaUsuarioBloqueadoOUUsuarioOuSenhaErrado() {
-        driver.findElement(By.xpath(object.alertErroLogin)).isDisplayed();
     }
 
     public void adicionarItensAoCarrinho(List<String> listItensAdicionar){
