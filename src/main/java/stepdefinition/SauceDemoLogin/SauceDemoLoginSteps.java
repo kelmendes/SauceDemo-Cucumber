@@ -36,9 +36,9 @@ public class SauceDemoLoginSteps {
     @When("^Devo ser exibido um alerta que o esse usuario ou senha está errado$")
     public void devo_ser_exibido_um_alerta_que_o_esse_usuario_ou_senha_está_errado(){ sauceDemoMO.alertaUsuarioBloqueadoOUUsuarioOuSenhaErrado(); }
 
-    @Then("^Então deve fechar o navegador$")
-    public void então_deve_fechar_o_navegador()  {
-        sauceDemoMO.fecharBrowser();
+    @Then("^Então deve fazer logout$")
+    public void então_deve_fazer_logout()  {
+        sauceDemoMO.fazerLogout();
     }
 
 }

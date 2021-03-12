@@ -8,7 +8,7 @@ Feature: Realizar operções para validar o carrinho
         And Devo ser redirecionado para tela inicial do Digital
         And Adiciono os itens "<nome_produto>" clicando no botão Add to Cart
         When O contado de itens no carrinho deve mudar
-        Then Então deve fechar o navegador
+        Then Então deve fazer logout
         Examples:
             | nome_user       | passwd_user   | nome_produto |
             | standard_user   | secret_sauce  | Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt |
@@ -22,7 +22,7 @@ Feature: Realizar operções para validar o carrinho
         And Adiciono os itens "<nome_produto>" clicando no botão Add to Cart
         And Acessar tela do carrinho de compras
         When Validar que todos os "<nome_produto>" estão adicionados
-        Then Então deve fechar o navegador
+        Then Então deve fazer logout
         Examples:
             | nome_user       | passwd_user   | nome_produto |
             | performance_glitch_user   | secret_sauce  | Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt |
@@ -42,7 +42,7 @@ Feature: Realizar operções para validar o carrinho
         And valido a forma de pagamento, entrega e total da compra
         And clico em finish
         When Devo ser redirecionado para tela que minha ordem vai ser despachada
-        Then Então deve fechar o navegador
+        Then Então deve fazer logout
         Examples:
             | nome_user       | passwd_user   | nome_produto |
             | performance_glitch_user   | secret_sauce  | Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt |

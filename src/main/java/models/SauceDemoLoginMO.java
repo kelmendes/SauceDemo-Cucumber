@@ -19,9 +19,9 @@ public class SauceDemoLoginMO {
         this.driver.get(urlSite);
     }
 
-    public void fecharBrowser() {
-//        this.driver.close();
-        System.out.println("Browser Fechado!");
+    public void fazerLogout() {
+        driver.findElement(By.xpath(objectLogin.btnMenuLateral)).click();
+        driver.findElement(By.xpath(objectLogin.btnLogoutMenuLateral)).click();
     }
 
 
