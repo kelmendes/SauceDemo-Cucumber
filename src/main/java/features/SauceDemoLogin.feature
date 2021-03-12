@@ -13,21 +13,15 @@ Feature: Validação do Login
             | performance_glitch_user | secret_sauce  |
 
     @Login
-    Scenario Outline: Validação do Login com usuário bloqueado
+    Scenario: Validação do Login com usuário bloqueado
         Given Dado que consigo   carregar a aplicação
-        And Informo o nome de "<nome_user>" e "<passwd_user>" válidos
+        And Informo o nome de "locked_out_user" e "locked_out_user" válidos
         When Clico no botão login
         Then Devo ser exibido um alerta que o esse usuario está bloqueado
-        Examples:
-            | nome_user       | passwd_user   |
-            | locked_out_user   | secret_sauce  |
 
     @Login
-    Scenario Outline: Validação do Login com usuário errado
+    Scenario: Validação do Login com usuário errado
         Given Dado que consigo   carregar a aplicação
-        And Informo o nome de "<nome_user>" e "<passwd_user>" válidos
+        And Informo o nome de "locked_out_user" e "senha_errada" válidos
         When Clico no botão login
         Then Devo ser exibido um alerta que o esse usuario ou senha está errado
-        Examples:
-            | nome_user       | passwd_user   |
-            | locked_out_user   | senha_errada  |
