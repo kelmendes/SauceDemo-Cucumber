@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/main/java/features"}
+        features = {"src/test/java/features"}
         ,glue = {"stepdefinition"}
-        ,plugin = {"html:target/cucumber-html-report", "com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/output/report.html"}
+        ,plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/output/report.html"}
         ,dryRun = false
         ,tags = {
                 "@Login, " +
