@@ -65,7 +65,6 @@ public class SauceDemoCartMO {
         //div[@class='complete-text'] = Your order has been dispatched, and will arrive just as fast as the pony can get there!
         driver.findElement(By.xpath("//h2[@class='complete-header']")).isDisplayed();
         driver.findElement(By.xpath("//div[@class='complete-text']")).isDisplayed();
-
-
     }
+
 }

@@ -22,6 +22,14 @@ public class SauceDemoCartSteps {
 
     @When("^Validar que todos os \"([^\"]*)\" estão adicionados$")
     public void validar_que_todos_os_estão_adicionados(List<String> strProdutos){ sauceDemoMO.verificarItensNoCarrinho(strProdutos); }
+
+    @And("^Que o usuário tenha adicionado todos os itens \"([^\"]*)\" ao carrinho$")
+    public void dado_que_usuario_adicinou_todos_os_itens_ao_carrinho(List<String> strNomeProduto){
+        sauceDemoMO.adicionarItensAoCarrinho(strNomeProduto);
+        sauceDemoMO.verificarContador(6);
+        sauceDemoMO.acessarCartdeCompras();
+    }
+
     @Given("^Clico no botão de checkout$")
     public void clico_no_botão_de_checkout(){ sauceDemoMO.clicarBtnCheckout(); }
 

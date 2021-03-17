@@ -16,11 +16,9 @@ Feature: Realizar operções para validar o carrinho
     @Cart
     Scenario Outline: Validando Itens ao carrinho de compras
         Given Dado que consigo   carregar a aplicação
-        And Informo o nome de "performance_glitch_user" e "secret_sauce" válidos
+        And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
-        And Devo ser redirecionado para tela inicial do Digital
-        And Adiciono os itens "<nome_produto>" clicando no botão Add to Cart
-        And Acessar tela do carrinho de compras
+        And Que o usuário tenha adicionado todos os itens "<nome_produto>" ao carrinho
         When Validar que todos os "<nome_produto>" estão adicionados
         Then Então deve fazer logout
         Examples:
@@ -30,12 +28,9 @@ Feature: Realizar operções para validar o carrinho
     @Cart
     Scenario Outline: Proceder para checkout
         Given Dado que consigo   carregar a aplicação
-        And Informo o nome de "performance_glitch_user" e "secret_sauce" válidos
+        And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
-        And Devo ser redirecionado para tela inicial do Digital
-        And Adiciono os itens "<nome_produto>" clicando no botão Add to Cart
-        And Acessar tela do carrinho de compras
-        And Validar que todos os "<nome_produto>" estão adicionados
+        And Que o usuário tenha adicionado todos os itens "<nome_produto>" ao carrinho
         And Clico no botão de checkout
         And Informo os dados básicos para realizar o checkout
         And Clico em continuar com o checkout
