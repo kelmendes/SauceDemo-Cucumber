@@ -11,8 +11,12 @@ import org.junit.runner.RunWith;
         ,plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/output/report.html"}
         ,dryRun = false
         ,tags = {
-//                "@Login, "
-                "@Cart"
+                "@LoginValidUser, " +
+                "@LoginUserBlock, "+
+                "@LoginInvalidUser, " +
+                "@CartAddItems, " +
+                "@CartValidateItems, " +
+                "@CartCheckout"
         }
 )
 public class Runner {

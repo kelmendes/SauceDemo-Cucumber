@@ -3,7 +3,7 @@ Feature: Realizar operções para validar o carrinho
     Background: Login Aplicação
         Given Dado que consigo   carregar a aplicação
 
-#    @Cart
+    @CartAddItems
     Scenario Outline: Adicionando Itens ao carrinho de compras
         And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
@@ -15,7 +15,7 @@ Feature: Realizar operções para validar o carrinho
             | nome_produto |
             | Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt |
 
-#    @Cart
+    @CartValidateItems
     Scenario: Validando Itens ao carrinho de compras
         And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
@@ -23,7 +23,7 @@ Feature: Realizar operções para validar o carrinho
         When Validar que todos os estão adicionados
         Then Então deve fazer logout
 
-    @Cart
+    @CartCheckout
     Scenario: Proceder para checkout
         And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
