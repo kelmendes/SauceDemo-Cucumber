@@ -5,6 +5,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import stepdefinition.hook.Hook;
 
+import static utils.utils.moveToElement;
+import static utils.utils.scrollToElement;
+
 public class SauceDemoCartPO {
 
     WebDriver driver;
@@ -34,7 +37,7 @@ public class SauceDemoCartPO {
     }
 
     public void btnCheckout(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath(btnCheckout)));
+        scrollToElement(By.xpath(btnCheckout));
         driver.findElement(By.xpath(btnCheckout)).click();
     }
 
@@ -51,12 +54,12 @@ public class SauceDemoCartPO {
     }
 
     public void btnCheckoutContinue(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath(btnCheckoutContinue)));
+        scrollToElement(By.xpath(btnCheckoutContinue));
         driver.findElement(By.xpath(btnCheckoutContinue)).click();
     }
 
     public void btnFinish(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath(btnFinish)));
+        scrollToElement(By.xpath(btnFinish));
         driver.findElement(By.xpath(btnFinish)).click();
     }
 

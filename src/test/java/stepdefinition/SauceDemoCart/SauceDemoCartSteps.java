@@ -7,6 +7,9 @@ import models.SauceDemoCartMO;
 
 import java.util.List;
 
+import static utils.utils.creatCookieProdutos;
+import static utils.utils.getStrNomeProduto;
+
 public class SauceDemoCartSteps {
 
     SauceDemoCartMO sauceDemoMO = new SauceDemoCartMO();
@@ -20,13 +23,13 @@ public class SauceDemoCartSteps {
     @Given("^Acessar tela do carrinho de compras$")
     public void acessar_tela_do_carrinho_de_compras(){ sauceDemoMO.acessarCartdeCompras(); }
 
-    @When("^Validar que todos os \"([^\"]*)\" estão adicionados$")
-    public void validar_que_todos_os_estão_adicionados(List<String> strProdutos){ sauceDemoMO.verificarItensNoCarrinho(strProdutos); }
+    @When("^Validar que todos os estão adicionados$")
+    public void validar_que_todos_os_estão_adicionados(){ sauceDemoMO.verificarItensNoCarrinho(getStrNomeProduto()); }
 
-    @And("^Que o usuário tenha adicionado todos os itens \"([^\"]*)\" ao carrinho$")
-    public void dado_que_usuario_adicinou_todos_os_itens_ao_carrinho(List<String> strNomeProduto){
-        sauceDemoMO.adicionarItensAoCarrinho(strNomeProduto);
-        sauceDemoMO.verificarContador(6);
+    @And("^Que o usuário tenha adicionado todos os itens ao carrinho$")
+    public void dado_que_usuario_adicinou_todos_os_itens_ao_carrinho(){
+        sauceDemoMO.adicionarItensAoCarrinho(getStrNomeProduto());
+        sauceDemoMO.verificarContador(getStrNomeProduto().size());
         sauceDemoMO.acessarCartdeCompras();
     }
 
