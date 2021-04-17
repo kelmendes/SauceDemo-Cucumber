@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         ,plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/output/report.html"}
         ,dryRun = false
         ,tags = {
-//                "@Login, " +
+//                "@Login, "
                 "@Cart"
         }
 )

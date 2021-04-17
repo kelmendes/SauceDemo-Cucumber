@@ -1,8 +1,10 @@
 Feature: Realizar operções para validar o carrinho
 
+    Background: Login Aplicação
+        Given Dado que consigo   carregar a aplicação
+
     @Cart
     Scenario Outline: Adicionando Itens ao carrinho de compras
-        Given Dado que consigo   carregar a aplicação
         And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
         And Devo ser redirecionado para tela inicial do Digital
@@ -15,7 +17,6 @@ Feature: Realizar operções para validar o carrinho
 
     @Cart
     Scenario Outline: Validando Itens ao carrinho de compras
-        Given Dado que consigo   carregar a aplicação
         And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
         And Que o usuário tenha adicionado todos os itens "<nome_produto>" ao carrinho
@@ -27,7 +28,6 @@ Feature: Realizar operções para validar o carrinho
 
     @Cart
     Scenario Outline: Proceder para checkout
-        Given Dado que consigo   carregar a aplicação
         And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
         And Que o usuário tenha adicionado todos os itens "<nome_produto>" ao carrinho

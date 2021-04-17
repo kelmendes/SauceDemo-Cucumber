@@ -19,7 +19,7 @@ public class SauceDemoCartMO {
 
     public void adicionarItensAoCarrinho(List<String> listItensAdicionar){
         for(int i=0;i<listItensAdicionar.size();i++) {
-            driver.findElement(By.xpath("//div[text()='" + listItensAdicionar.get(i) + "']/./../../../div[3]/button")).click();
+            driver.findElement(By.xpath("//div[text()='" + listItensAdicionar.get(i) + "']/../../../div[2]/button")).click();
         }
     }
 
@@ -56,8 +56,8 @@ public class SauceDemoCartMO {
     }
 
     public void clicarBtnFinish(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.linkText(object.btnFinish)));
-        driver.findElement(By.linkText(object.btnFinish)).click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath(object.btnFinish)));
+        driver.findElement(By.xpath(object.btnFinish)).click();
     }
 
     public void validarTelaDespachoOrdem(){
