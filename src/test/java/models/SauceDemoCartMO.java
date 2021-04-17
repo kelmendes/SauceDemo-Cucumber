@@ -19,14 +19,12 @@ public class SauceDemoCartMO {
 
     public void adicionarItensAoCarrinho(List<String> listItensAdicionar){
         for(int i=0;i<listItensAdicionar.size();i++) {
-            driver.findElement(By.xpath("//div[text()='" + listItensAdicionar.get(i) + "']/../../../div[2]/button")).click();
+            object.adicionarItemCarrinho(listItensAdicionar.get(i));
         }
     }
 
     public void verificarContador(int intQuantidadeItens){
-        String strQuantideCart = driver.findElement(By.xpath(object.spanQtdItensCarrinho)).getText();
-        int intQuantideCart = Integer.parseInt(strQuantideCart);
-        Assert.assertArrayEquals(new int[]{intQuantidadeItens}, new int[]{intQuantideCart});
+        Assert.assertArrayEquals(new int[]{intQuantidadeItens}, new int[]{object.quantidadeItensCarrinho()});
     }
 
     public void acessarCartdeCompras(){
@@ -40,24 +38,21 @@ public class SauceDemoCartMO {
     }
 
     public void clicarBtnCheckout(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath(object.btnCheckout)));
-        driver.findElement(By.xpath(object.btnCheckout)).click();
+        object.btnCheckout();
     }
 
     public void preencherDadosDoCheckout(){
-        driver.findElement(By.xpath(object.inputCheckoutName)).sendKeys("TESTE NOME");
-        driver.findElement(By.xpath(object.inputCheckoutLastName)).sendKeys("SOBRE NOME");
-        driver.findElement(By.xpath(object.inputCheckoutCEP)).sendKeys("55034090");
+        object.setInputCheckoutName("TESTE NOME");
+        object.setInputCheckoutLastName("SOBRE NOME");
+        object.setInputCheckoutCEP("55034090");
     }
 
     public void clicarBtnContinue(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath(object.btnCheckoutContinue)));
-        driver.findElement(By.xpath(object.btnCheckoutContinue)).click();
+        object.btnCheckoutContinue();
     }
 
-    public void clicarBtnFinish(){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(By.xpath(object.btnFinish)));
-        driver.findElement(By.xpath(object.btnFinish)).click();
+    public void clicarBtnFinish() {
+        object.btnFinish();
     }
 
     public void validarTelaDespachoOrdem(){
