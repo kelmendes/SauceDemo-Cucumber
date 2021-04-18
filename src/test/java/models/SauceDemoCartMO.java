@@ -28,7 +28,7 @@ public class SauceDemoCartMO {
     }
 
     public void acessarCartdeCompras(){
-        driver.findElement(By.xpath(object.cartIcone)).click();
+        object.cartIcone();
     }
 
     public void verificarItensNoCarrinho(List<String> listIntensCart){

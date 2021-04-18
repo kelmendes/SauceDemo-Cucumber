@@ -30,10 +30,17 @@ public class SauceDemoCartPO {
         driver.findElement(By.xpath("//div[text()='" + intenAdicionar + "']/../../../div[2]/button")).click();
     }
 
+    public boolean listaDeItensHome(){
+        return driver.findElement(By.xpath(divContainerListaDeItensHome)).isDisplayed();
+    }
+
+    public void cartIcone(){
+        driver.findElement(By.xpath(cartIcone)).click();
+    }
+
     public int quantidadeItensCarrinho(){
         String strQuantideCart = driver.findElement(By.xpath(spanQtdItensCarrinho)).getText();
-        int intQuantideCart = Integer.parseInt(strQuantideCart);
-        return intQuantideCart;
+        return Integer.parseInt(strQuantideCart);
     }
 
     public void btnCheckout(){

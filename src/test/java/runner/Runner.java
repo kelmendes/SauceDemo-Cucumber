@@ -13,10 +13,10 @@ import org.junit.runner.RunWith;
         ,tags = {
                 "@LoginValidUser, " +
                 "@LoginUserBlock, "+
-                "@LoginInvalidUser, " +
-                "@CartAddItems, " +
-                "@CartValidateItems, " +
-                "@CartCheckout"
+                "@LoginInvalidUser, "
+//                "@CartAddItems, " +
+//                "@CartValidateItems, " +
+//                "@CartCheckout"
         }
 )
 public class Runner {

@@ -1,5 +1,6 @@
 package models;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pageobjects.SauceDemoCartPO;
@@ -20,25 +21,25 @@ public class SauceDemoLoginMO {
     }
 
     public void fazerLogout() {
-        driver.findElement(By.xpath(objectLogin.btnMenuLateral)).click();
-        driver.findElement(By.xpath(objectLogin.btnLogoutMenuLateral)).click();
+        objectLogin.btnMenuLateral();
+        objectLogin.btnLogoutMenuLateral();
     }
 
 
     public void login (String nome, String senha){
-        driver.findElement(By.xpath(objectLogin.inputUserName)).sendKeys(nome);
-        driver.findElement(By.xpath(objectLogin.inputPassword)).sendKeys(senha);
+        objectLogin.setInputUserName(nome);
+        objectLogin.setInputPassword(senha);
     }
 
     public void clickBtnLogin() {
-        driver.findElement(By.xpath(objectLogin.btnLogin)).click();
+        objectLogin.btnLogin();
     }
 
     public void validarLoginHome() {
-        driver.findElement(By.xpath(objectCart.divContainerListaDeItensHome)).isDisplayed();
+        Assert.assertTrue("[ASSERT] - Itens da página home estão presentes!", objectCart.listaDeItensHome());
     }
 
     public void alertaUsuarioBloqueadoOUUsuarioOuSenhaErrado() {
-        driver.findElement(By.xpath(objectLogin.alertErroLogin)).isDisplayed();
+        Assert.assertTrue("[ASSERT] - Alerta está pesente!", objectLogin.alertErroLogin());
     }
 }
