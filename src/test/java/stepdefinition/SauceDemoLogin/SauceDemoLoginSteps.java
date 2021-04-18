@@ -6,6 +6,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import models.SauceDemoLoginMO;
 
+import static utils.utils.creatCookieProdutos;
+
 public class SauceDemoLoginSteps {
 
     SauceDemoLoginMO sauceDemoMO = new SauceDemoLoginMO();

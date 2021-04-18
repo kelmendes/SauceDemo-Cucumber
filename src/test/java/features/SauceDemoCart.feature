@@ -1,8 +1,10 @@
 Feature: Realizar operções para validar o carrinho
 
-    @Cart
-    Scenario Outline: Adicionando Itens ao carrinho de compras
+    Background: Login Aplicação
         Given Dado que consigo   carregar a aplicação
+
+    @CartAddItems
+    Scenario Outline: Adicionando Itens ao carrinho de compras
         And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
         And Devo ser redirecionado para tela inicial do Digital
@@ -13,29 +15,19 @@ Feature: Realizar operções para validar o carrinho
             | nome_produto |
             | Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt |
 
-    @Cart
-    Scenario Outline: Validando Itens ao carrinho de compras
-        Given Dado que consigo   carregar a aplicação
-        And Informo o nome de "performance_glitch_user" e "secret_sauce" válidos
+    @CartValidateItems
+    Scenario: Validando Itens ao carrinho de compras
+        And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
-        And Devo ser redirecionado para tela inicial do Digital
-        And Adiciono os itens "<nome_produto>" clicando no botão Add to Cart
-        And Acessar tela do carrinho de compras
-        When Validar que todos os "<nome_produto>" estão adicionados
+        And Que o usuário tenha adicionado todos os itens ao carrinho
+        When Validar que todos os estão adicionados
         Then Então deve fazer logout
-        Examples:
-            | nome_produto |
-            | Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt |
 
-    @Cart
-    Scenario Outline: Proceder para checkout
-        Given Dado que consigo   carregar a aplicação
-        And Informo o nome de "performance_glitch_user" e "secret_sauce" válidos
+    @CartCheckout
+    Scenario: Proceder para checkout
+        And Informo o nome de "standard_user" e "secret_sauce" válidos
         And Clico no botão login
-        And Devo ser redirecionado para tela inicial do Digital
-        And Adiciono os itens "<nome_produto>" clicando no botão Add to Cart
-        And Acessar tela do carrinho de compras
-        And Validar que todos os "<nome_produto>" estão adicionados
+        And Que o usuário tenha adicionado todos os itens ao carrinho
         And Clico no botão de checkout
         And Informo os dados básicos para realizar o checkout
         And Clico em continuar com o checkout
@@ -43,9 +35,6 @@ Feature: Realizar operções para validar o carrinho
         And clico em finish
         When Devo ser redirecionado para tela que minha ordem vai ser despachada
         Then Então deve fazer logout
-        Examples:
-            | nome_produto |
-            | Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt |
 
 
 
