@@ -70,4 +70,8 @@ public class SauceDemoCartPO {
         driver.findElement(By.xpath(btnFinish)).click();
     }
 
+    public boolean verificarItenNoCarrinho(String strNomeItem) {
+         return  driver.findElement(By.xpath("//div[text()='" + strNomeItem + "']")).isDisplayed();
+    }
+
 }

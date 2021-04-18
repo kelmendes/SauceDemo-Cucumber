@@ -18,8 +18,8 @@ public class SauceDemoCartMO {
     }
 
     public void adicionarItensAoCarrinho(List<String> listItensAdicionar){
-        for(int i=0;i<listItensAdicionar.size();i++) {
-            object.adicionarItemCarrinho(listItensAdicionar.get(i));
+        for (String s : listItensAdicionar) {
+            object.adicionarItemCarrinho(s);
         }
     }
 
@@ -32,8 +32,8 @@ public class SauceDemoCartMO {
     }
 
     public void verificarItensNoCarrinho(List<String> listIntensCart){
-        for(int i=0;i<listIntensCart.size();i++) {
-            driver.findElement(By.xpath("//div[text()='" + listIntensCart.get(i) + "']")).isDisplayed();
+        for (String s : listIntensCart) {
+            Assert.assertTrue("[ASSERT] - " + s + " está no carrinho!", object.verificarItenNoCarrinho(s));
         }
     }
 
