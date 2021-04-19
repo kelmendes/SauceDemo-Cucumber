@@ -32,7 +32,7 @@ public class SauceDemoCartSteps {
         sauceDemoMO.acessarCartdeCompras();
     }
 
-    @Given("^Clico no botãao de checkout$")
+    @Given("^Clico no botão de checkout$")
     public void clico_no_botao_de_checkout(){ sauceDemoMO.clicarBtnCheckout(); }
 
     @Given("^Informo os dados básicos para realizar o checkout$")
