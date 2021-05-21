@@ -1,2 +1,2 @@
-/target/test-classes/
-/target/generated-test-sources/
+*.class
+/target/
