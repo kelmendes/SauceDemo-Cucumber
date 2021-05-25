@@ -1,11 +1,9 @@
 package pageobjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import stepdefinition.hook.Hook;
 
-import static utils.utils.moveToElement;
 import static utils.utils.scrollToElement;
 
 public class SauceDemoCartPO {
@@ -68,6 +66,10 @@ public class SauceDemoCartPO {
     public void btnFinish(){
         scrollToElement(By.xpath(btnFinish));
         driver.findElement(By.xpath(btnFinish)).click();
+    }
+
+    public boolean verificarItenNoCarrinho(String strNomeItem) {
+         return  driver.findElement(By.xpath("//div[text()='" + strNomeItem + "']")).isDisplayed();
     }
 
 }

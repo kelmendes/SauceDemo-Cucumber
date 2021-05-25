@@ -7,7 +7,6 @@ import models.SauceDemoCartMO;
 
 import java.util.List;
 
-import static utils.utils.creatCookieProdutos;
 import static utils.utils.getStrNomeProduto;
 
 public class SauceDemoCartSteps {
@@ -15,7 +14,7 @@ public class SauceDemoCartSteps {
     SauceDemoCartMO sauceDemoMO = new SauceDemoCartMO();
 
     @And("^Adiciono os itens \"([^\"]*)\" clicando no botão Add to Cart$")
-    public void adiciono_os_itens_clicando_no_botão_Add_to_Cart(List<String> strNomeProduto){ sauceDemoMO.adicionarItensAoCarrinho(strNomeProduto); }
+    public void adiciono_os_itens_clicando_no_botao_Add_to_Cart(List<String> strNomeProduto){ sauceDemoMO.adicionarItensAoCarrinho(strNomeProduto); }
 
     @When("^O contado de itens no carrinho deve mudar$")
     public void o_contado_de_itens_no_carrinho_deve_mudar(){ sauceDemoMO.verificarContador(6); }
@@ -24,7 +23,7 @@ public class SauceDemoCartSteps {
     public void acessar_tela_do_carrinho_de_compras(){ sauceDemoMO.acessarCartdeCompras(); }
 
     @When("^Validar que todos os estão adicionados$")
-    public void validar_que_todos_os_estão_adicionados(){ sauceDemoMO.verificarItensNoCarrinho(getStrNomeProduto()); }
+    public void validar_que_todos_os_estao_adicionados(){ sauceDemoMO.verificarItensNoCarrinho(getStrNomeProduto()); }
 
     @And("^Que o usuário tenha adicionado todos os itens ao carrinho$")
     public void dado_que_usuario_adicinou_todos_os_itens_ao_carrinho(){
@@ -34,10 +33,10 @@ public class SauceDemoCartSteps {
     }
 
     @Given("^Clico no botão de checkout$")
-    public void clico_no_botão_de_checkout(){ sauceDemoMO.clicarBtnCheckout(); }
+    public void clico_no_botao_de_checkout(){ sauceDemoMO.clicarBtnCheckout(); }
 
     @Given("^Informo os dados básicos para realizar o checkout$")
-    public void informo_os_dados_básicos_para_realizar_o_checkout(){ sauceDemoMO.preencherDadosDoCheckout(); }
+    public void informo_os_dados_basicos_para_realizar_o_checkout(){ sauceDemoMO.preencherDadosDoCheckout(); }
 
     @Given("^Clico em continuar com o checkout$")
     public void clico_em_continuar_com_o_checkout(){ sauceDemoMO.clicarBtnContinue(); }
