@@ -8,14 +8,14 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/java/features"}
         ,glue = {"stepdefinition"}
-        ,plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/output/report.html"}
+        ,plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/cucumber-report/report.html",  "json:target/cucumber-report/cucumber.json"}
         ,dryRun = false
         ,tags = {
-                "@LoginValidUser, " +
-                "@LoginUserBlock, "+
-                "@LoginInvalidUser, " +
-                "@CartAddItems, " +
-                "@CartValidateItems, " +
+//                "@LoginValidUser, " +
+//                "@LoginUserBlock, "+
+//                "@LoginInvalidUser, " +
+//                "@CartAddItems, " +
+//                "@CartValidateItems, " +
                 "@CartCheckout"
         }
 )

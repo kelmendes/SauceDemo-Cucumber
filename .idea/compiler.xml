@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Test-FY21" />
+        <module name="SauceDemo-Cucumber" />
         <module name="FY21" />
       </profile>
     </annotationProcessing>
