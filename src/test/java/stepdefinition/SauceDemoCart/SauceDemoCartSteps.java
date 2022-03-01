@@ -13,7 +13,7 @@ public class SauceDemoCartSteps {
 
     SauceDemoCartMO sauceDemoMO = new SauceDemoCartMO();
 
-    @And("^Adiciono os itens \"([^\"]*)\" clicando no botão Add to Cart$")
+    @And("^Adiciono os itens clicando no botão Add to Cart:$")
     public void adiciono_os_itens_clicando_no_botao_Add_to_Cart(List<String> strNomeProduto){ sauceDemoMO.adicionarItensAoCarrinho(strNomeProduto); }
 
     @When("^O contado de itens no carrinho deve mudar$")

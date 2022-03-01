@@ -9,7 +9,13 @@ Feature: Realizar operações para validar o carrinho
         And Informo o nome de "performance_glitch_user" e "secret_sauce" válidos
         And Clico no botão login
         And Devo ser redirecionado para tela inicial do Digital
-        And Adiciono os itens "Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt" clicando no botão Add to Cart
+        And Adiciono os itens clicando no botão Add to Cart:
+            | Sauce Labs Backpack               |
+            | Sauce Labs Bike Light             |
+            | Sauce Labs Onesie                 |
+            | Test.allTheThings() T-Shirt (Red) |
+            | Sauce Labs Fleece Jacket          |
+            | Sauce Labs Bolt T-Shirt           |
         When O contado de itens no carrinho deve mudar
         Then Então deve fazer logout
 
@@ -18,7 +24,13 @@ Feature: Realizar operações para validar o carrinho
         And Informo o nome de "problem_user" e "secret_sauce" válidos
         And Clico no botão login
         And Devo ser redirecionado para tela inicial do Digital
-        And Adiciono os itens "Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red), Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt" clicando no botão Add to Cart
+        And Adiciono os itens clicando no botão Add to Cart:
+            | Sauce Labs Backpack               |
+            | Sauce Labs Bike Light             |
+            | Sauce Labs Onesie                 |
+            | Test.allTheThings() T-Shirt (Red) |
+            | Sauce Labs Fleece Jacket          |
+            | Sauce Labs Bolt T-Shirt           |
         When O contado de itens no carrinho deve mudar
         Then Então deve fazer logout
 
