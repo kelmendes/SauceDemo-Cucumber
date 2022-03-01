@@ -1,9 +1,10 @@
+@Regression
 Feature: Realizar operações para validar o carrinho
 
     Background: Login Aplicação
         Given Dado que consigo   carregar a aplicação
 
-    @CartAddItems
+    @CartAddItems @R1
     Scenario: Adicionando Itens ao carrinho de compras
         And Informo o nome de "performance_glitch_user" e "secret_sauce" válidos
         And Clico no botão login
@@ -12,7 +13,7 @@ Feature: Realizar operações para validar o carrinho
         When O contado de itens no carrinho deve mudar
         Then Então deve fazer logout
 
-    @CartAddItems
+    @CartAddItems @R2
     Scenario: Adicionando Itens ao carrinho de compras - Aplicação com Problema
         And Informo o nome de "problem_user" e "secret_sauce" válidos
         And Clico no botão login
@@ -21,7 +22,7 @@ Feature: Realizar operações para validar o carrinho
         When O contado de itens no carrinho deve mudar
         Then Então deve fazer logout
 
-    @CartValidateItems
+    @CartValidateItems @R3
     Scenario: Validando Itens ao carrinho de compras
         And Informo o nome de "performance_glitch_user" e "secret_sauce" válidos
         And Clico no botão login
@@ -29,7 +30,7 @@ Feature: Realizar operações para validar o carrinho
         When Validar que todos os estão adicionados
         Then Então deve fazer logout
 
-    @CartCheckout
+    @CartCheckout @R4
     Scenario: Proceder para checkout
         And Informo o nome de "performance_glitch_user" e "secret_sauce" válidos
         And Clico no botão login
@@ -41,6 +42,3 @@ Feature: Realizar operações para validar o carrinho
         And clico em finish
         When Devo ser redirecionado para tela que minha ordem vai ser despachada
         Then Então deve fazer logout
-
-
-

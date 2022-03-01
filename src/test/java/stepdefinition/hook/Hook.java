@@ -1,7 +1,8 @@
 package stepdefinition.hook;
 
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,9 +17,11 @@ public class Hook {
     @Before
     public void tearUP(){
 
+        System.out.println("+++++++++ UP - HOOK +++++++++++");
+
         WebDriverManager.chromedriver().setup();
         ChromeOptions option = new ChromeOptions();
-        option.setHeadless(false);
+        option.setHeadless(true);
         driver = new ChromeDriver(option);
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -28,6 +31,12 @@ public class Hook {
         driver.manage().window().maximize();
 
     }
+
+    @AfterStep
+    public void setScreenShot(){
+
+    }
+
 
     public static WebDriver getsDrivers(){
         return driver;
