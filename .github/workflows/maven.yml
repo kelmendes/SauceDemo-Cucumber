@@ -18,7 +18,7 @@ jobs:
         run: docker build . --file Dockerfile --tag my_docker_project:$(date +%s)
 
   test:
-
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
