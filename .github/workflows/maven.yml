@@ -8,17 +8,8 @@ on:
     branches: [ "develop" ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag my_docker_project:$(date +%s)
-
+ 
   test:
-    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -41,5 +32,5 @@ jobs:
       if: always()
       with:
         name: cluecumber-report
-        path: target\generated-report
+        path: ./target/generated-report
         retention-days: 30
