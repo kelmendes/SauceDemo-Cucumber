@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>BDD</groupId>
-    <artifactId>FY21</artifactId>
+    <artifactId>Selenium_Java_Cucumber</artifactId>
     <version>1.9.0</version>
     <packaging>jar</packaging>
 

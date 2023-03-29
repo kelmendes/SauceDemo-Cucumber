@@ -10,6 +10,7 @@
         <module name="Test-FY21" />
         <module name="SauceDemo-Cucumber" />
         <module name="FY21" />
+        <module name="Selenium_Java_Cucumber" />
       </profile>
     </annotationProcessing>
   </component>
