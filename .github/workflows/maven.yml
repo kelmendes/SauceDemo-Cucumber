@@ -56,3 +56,5 @@ jobs:
       if: always()
       id: deployment
       uses: actions/deploy-pages@v1
+      env:
+        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
