@@ -37,14 +37,7 @@ jobs:
         
     - name: Setup Pages
       uses: actions/configure-pages@v2
-      
-    - name: Get Allure history
-      uses: actions/checkout@v3
-      if: always()
-      continue-on-error: true
-      with:
-        ref: gh-pages
-        path: gh-pages
+    
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
