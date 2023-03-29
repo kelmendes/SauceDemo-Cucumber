@@ -25,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
         
-    - name: Build with Maven
+    - name: Run test
       run: mvn post-integration-test
       
     - uses: actions/upload-artifact@v3
@@ -38,23 +38,25 @@ jobs:
     - name: Setup Pages
       uses: actions/configure-pages@v2
       
+    - name: Get Allure history
+      uses: actions/checkout@v3
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
+      
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
         path: ./target/generated-report
         
-    #- name: Deploy report to Github Pages
-     # if: always()
-     # uses: peaceiris/actions-gh-pages@v2
-    #  env:
-    #    PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #    PUBLISH_BRANCH: gh-pages
-     #   PUBLISH_DIR: cluecumber-history
-      
-          
-    - name: Deploy to GitHub Pages
+    - name: Deploy report to Github Pages
       if: always()
-      id: deployment
-      uses: actions/deploy-pages@v1
+      uses: peaceiris/actions-gh-pages@v2
       env:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: cluecumber-history
+      
+
